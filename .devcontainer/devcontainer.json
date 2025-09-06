@@ -8,7 +8,8 @@
   "postCreateCommand": "bash /workspaces/UoE-Python/.profile/setup.sh",
   "customizations": {
     "codespaces": {
-      "openFiles": []
+      "openFiles": [],
+      "remote.autoForwardPorts": false
     },
     "vscode": {
       "extensions": [
