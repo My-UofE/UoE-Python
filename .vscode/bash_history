@@ -1,0 +1,15 @@
+conda activate base
+/opt/conda/bin/python /workspaces/UoE-Python/LECTURES/Session01/myfirstcode.py
+pwd
+ls
+ls -a
+man ls
+ls -l
+ls -ltr
+cd LECTURES
+pwd
+cd Session01/
+ls
+python myfirstcode.py
+/opt/conda/bin/python /workspaces/UoE-Python/LECTURES/Session01/myfirstcode.py
+python
