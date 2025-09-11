@@ -1,0 +1,32 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/miniconda",
+  "hostRequirements": {
+    "cpus": 1
+  },
+  "waitFor": "onCreateCommand",
+  "updateContentCommand": "" ,
+  // "postCreateCommand": "jq '.\"chat.disableAIFeatures\" = true' /home/vscode/.vscode-remote/data/Machine/settings.json > settings.json.tmp && mv settings.json.tmp /home/vscode/.vscode-remote/data/Machine/settings.json; 
+  "postCreateCommand": "mv ~/.bashrc ~/.bashrc.bk ;  ln -s /workspaces/$RepositoryName/.vscode/bashrc ~/.bashrc ; echo setup bashrc; ln -s /workspaces/$RepositoryName/.vscode/bash_history ~/.bash_history ; echo setup bash_history; bash /workspaces/$RepositoryName/.vscode/setup.sh",
+  "customizations": {
+    "codespaces": {
+      "openFiles": [],
+      "remote.autoForwardPorts": false
+    },
+    "vscode": {
+      "extensions": [        
+        "ms-python.python",
+      ],
+      "settings": {
+        "editor.tabSize": 4,
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "terminal.integrated.profiles.linux": {
+          "bash": {
+            "path": "bash",
+            "icon": "terminal-bash"
+          }
+        }
+      }
+    }
+  }
+}
+        
